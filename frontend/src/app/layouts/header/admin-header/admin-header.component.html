@@ -1,0 +1,80 @@
+<header class="header-fix-top-cust">
+  <nav class="navbar fixed-top">
+    <ul
+      class="d-flex align-items-center mr-auto align-items-center hdr-top-box"
+    >
+      <li class="nav-item">
+        <div class="hdr-top-box-inr">
+          <div class="toggle-icon-main toggle-icon-main-sec d-xl-none d-block">
+            <img src="assets/images/toggle-icon.svg" alt="" />
+          </div>
+          <div class="d-xl-none d-block responsive-view-logo">
+            <a [routerLink]="['/']">
+              <img src="assets/images/afliyo_logo_main_admin.svg" alt="" />
+            </a>
+          </div>
+          <div class="d-md-none">
+            <div class="hdr-top-box-inr-icon">
+              <img src="assets/images/search-icon.svg" alt="" />
+            </div>
+          </div>
+          <div class="d-md-block d-none">
+            <div class="hdr-top-box-inr-icon">
+              <img src="assets/images/search-icon.svg" alt="" />
+            </div>
+            <input type="text" class="form-control" placeholder="Search" />
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <i class="fa fa-ellipsis-v d-md-none d-block" aria-hidden="true"></i>
+      </li>
+    </ul>
+    <ul
+      class="
+        d-flex
+        align-items-center align-items-center
+        ml-auto
+        responsive-view-menu
+      "
+    >
+      <li>
+        <div class="header-user-profile-inner-cust">
+          <div *ngIf="data" class="pro-sec-cust">
+            <img src="{{ data.profile_pic_img }}" class="" />
+            <div>
+              <h6>{{ data.name }}</h6>
+              <span>Admin</span>
+            </div>
+          </div>
+          <div class="profile-inner-cust">
+            <ul>
+              <li>
+                <a [routerLink]="['profile']"
+                  ><i class="fa fa-user"></i> My Profile</a
+                >
+              </li>
+              <li>
+                <a [routerLink]="['/admin/profile/edit']"
+                  ><i class="fa fa-edit"></i> edit profile</a
+                >
+              </li>
+              <li>
+                <a [routerLink]="['/admin/logout']" class="border-0"
+                  ><i class="fa fa-sign-out"></i> Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="d-md-none">
+      <div class="search-form-wrapper">
+        <div class="search-bar">
+          <input type="text" class="form-control" placeholder="Search" />
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

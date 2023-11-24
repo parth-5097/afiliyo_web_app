@@ -1,0 +1,120 @@
+body,
+html,
+.container {
+  color: #000;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+.calculater-logo img {
+  filter: invert(1);
+}
+
+.main-heading h1 {
+  font-weight: 900;
+  font-size: 60px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.main-heading p {
+  line-height: 1.75;
+  font-size: 1.125rem;
+  text-align: center;
+}
+.calc-label {
+  height: 22px;
+  color: #000;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+  text-transform: capitalize;
+  margin-top: 15px;
+  text-align: center;
+}
+.calc-input {
+  height: 39px;
+  width: inherit;
+  color: #101820;
+  font-size: 35px;
+  font-weight: normal;
+  letter-spacing: 0.75px;
+  line-height: 36px;
+  border: 0;
+  height: 100px;
+  background: #f6f6f6;
+  border-radius: 13px;
+  text-align: center;
+}
+.calc-input::placeholder {
+  color: #cacaca;
+  font-weight: 100;
+}
+.calc-input.is-invalid {
+  border: 1px solid red;
+}
+
+input.calc-input[type="number"]::-webkit-inner-spin-button,
+input.calc-input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.next-btn {
+  width: 170px;
+}
+.slider-bg:before {
+  content: "";
+  background: url("/assets/images/right-bg-slider.png");
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+}
+.slider-bg:after {
+  content: "";
+  background: url("/assets/images/left-bg-slider.png");
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+.position-set {
+  position: relative;
+}
+.bx-text-right .learn-more-btn.next-btn:hover {
+  background: #3bbfc6;
+  border-color: #3bbfc6;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .main-heading h1 {
+    font-size: 30px;
+  }
+  .heaser-fix {
+    position: inherit;
+  }
+}
+@media (max-width: 991px) {
+  .main-heading {
+    margin-top: 50px;
+  }
+  .padding-mbl {
+    padding: 0 45px;
+  }
+  .main-heading p {
+    padding: 0 30px;
+  }
+  input.calc-input::placeholder {
+    font-size: 25px;
+  }
+}

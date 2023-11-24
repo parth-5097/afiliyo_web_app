@@ -1,0 +1,87 @@
+https://www.codeply.com/p/xjn4SoQjD6
+https://dev.to/idrisrampurawala/exporting-data-to-excel-and-csv-in-angular-3643#export-to-csv --> Export data as CSV
+
+--> This is command to connect RDS with ec2
+mysql --user=[your Master username] --password -h [your database endpoint]
+
+--> import database with cli
+mysql -u root --password users < users.sql
+
+--> manage mysql with cli
+
+sudo service mysql status
+
+
+sudo service mysql start
+sudo service mysql stop
+sudo service mysql reload
+sudo service mysql restart
+
+--> for continous connection to aws server
+echo 'ClientAliveInterval 60' | sudo tee --append /etc/ssh/sshd_config
+
+--> for improve puppeteer scrapping watch this
+https://www.youtube.com/watch?v=biWUZAlTnkg&feature=youtu.be
+
+--> Add this to starting of the wesite-scrapper-puppetor library
+// const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth')
+const logger = require('./logger.js');
+
+puppeteer.use(StealthPlugin());
+
+    --> add this into launch option --> to increase speed of scrapping
+    args: ["--proxy-server=socks5://127.0.0.1:9050","--no-sandbox", "--disable-setuid-sendbox","--disable-dev-shm-usage","--disable-gpu"]
+
+mysql tables trigger --> CREATE TRIGGER before_post_update BEFORE UPDATE ON `post` FOR EACH ROW INSERT INTO `post_data_history` SET action = 'update', id=OLD.id, user_id=OLD.user_id, likes = OLD.likes, share = OLD.share, savePost = OLD.savePost, commentPost = OLD.commentPost
+                     --> CREATE TRIGGER after_follow_update AFTER (INSERT | UPDATE) ON `follow` FOR EACH ROW INSERT INTO `follow_data_history` SET action='update',main_user=OLD.main_user, following_user=SUBSTRING_INDEX(OLD.following_user, ',', 1)
+nginx refresh issue solved --> 
+        location /{
+                try_files $uri $uri/ /index.html?/$request_uri;
+        }
+
+recaptcha solved library --> 
+ @sesamestrong/puppeteer-recatpcha-solver
+ captcha-solver-provider
+ captcha-solver
+
+some github link for recaptch solver --> 
+ https://github.com/Sesamestrong/puppeteer-recaptcha-solver
+
+for tor integration with node -->
+ tor-control-promise
+
+
+p2p network chat --> 
+ must have other source download permission
+
+Array map example --> let val1 = Array.prototype.map.call(data, (s) => s.id).toString();
+
+hashChange detection with jquery and replace url code--> 
+$(window).on('hashchange', function (e) {
+        // location.replaceState(`/${window.location.hash.split('#')[1]}`);
+      });
+
+--> flutter important link
+        flutter --> https://pub.dev/packages/flutter_downloader
+        flutter --> https://medium.com/flutter-community/parsing-html-in-dart-with-html-package-cd43c29cc460
+
+don't use sendgrid mail service --> change it to the nodemailer
+
+
+for whatsapp api to send message --> 
+        https://api.whatsapp.com/send?phone=919624451035&text=%3Clink%20href=%22https://cdn.hasselblad.com/samples/x1d-II-50c/x1d-II-sample-06.jpg%22%3E
+
+payment system must be with razorpay --> already bookmarked page
+
+
+-- phpMyAdmin for automatic entry updation for older links of item
+DROP EVENT `after_links_expire`; 
+CREATE DEFINER=`root`@`localhost` EVENT `after_links_expire` ON SCHEDULE EVERY 1 DAY STARTS '2021-03-13 16:49:06' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN SELECT @old:=sort_id FROM transactional_sort_link where timestamp < date_sub(curdate(),interval 1 month); SELECT @id:=UPPER(LEFT(MD5(RAND()), 13)); UPDATE items SET link=@id WHERE link=@old; update transactional_sort_link set sort_id=@id where timestamp < date_sub(curdate(),interval 1 month); END
+
+-- mysql workbench for automatic entry updation for older links of item
+use afilio;
+drop event if exists `after_links_expire`; 
+CREATE DEFINER=`root`@`localhost` EVENT `after_links_expire` ON SCHEDULE EVERY 1 day STARTS '2021-03-13 16:49:06' ON COMPLETION NOT PRESERVE ENABLE DO SELECT @old:=sort_id FROM transactional_sort_link where timestamp < date_sub(curdate(),interval 1 month); SELECT @id:=UPPER(LEFT(MD5(RAND()), 13)); UPDATE items SET link=@id WHERE link=@old; update transactional_sort_link set sort_id=@id where timestamp < date_sub(curdate(),interval 1 month);
+show events from afilio;

@@ -1,0 +1,80 @@
+<nav [class]="currentClass">
+  <div class="container">
+    <a href="javascript:void(0)" (click)="onRedirect('influencer')">
+      <img src="/assets/images/afliyo_logo_main.svg" alt="" class="menu-icon" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="onRedirect('influencer')"
+            >influencer</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="onRedirect('brand')"
+            >brands</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="onRedirect('about')"
+            >about us</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="onRedirect('afiliate')"
+            >Affiliate-Marketing</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="onRedirect('download')"
+            >download</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="onRedirect('career')"
+            >careers</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="onRedirect('contact')"
+            >contact us</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

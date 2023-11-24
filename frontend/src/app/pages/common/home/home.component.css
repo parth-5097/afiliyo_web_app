@@ -1,0 +1,608 @@
+/*about us modal*/
+.About-Modal-Heading {
+  display: flex;
+  line-height: 6vw;
+  justify-content: center;
+}
+.About-Modal-Heading h2 {
+  font-size: 69px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/*.text-black {
+  color: transparent !important;
+  -webkit-text-stroke: 1px #000;
+  margin-right: 1rem;
+}*/
+.box-inner {
+  padding: 0 40px;
+}
+.number-text h1 {
+  font-size: 50px;
+  font-weight: 800;
+  color: transparent !important;
+  -webkit-text-stroke: 1px #000;
+  margin-right: 20px;
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+}
+.number-text h3 {
+  font-size: 31px;
+  font-weight: bold;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.number-text h3::after {
+  display: inline-block;
+  content: "";
+  border-top: 0.2rem solid black;
+  width: 3rem;
+  transform: translateY(1rem);
+  margin: 0 0;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+}
+.des-text {
+  font-size: 18px;
+  /* margin-top: 3rem; */
+  height: 120px;
+}
+.About-App-Features h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #333333;
+}
+.About-App-Features h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #333333;
+  line-height: 55px;
+}
+.sub-title-app {
+  position: relative;
+}
+.sub-title-app h3.border-bottom-after::after {
+  display: inline-block;
+  content: "";
+  border-top: 0.2rem solid black;
+  width: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.About-App-Features p {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 160%;
+  /* text-transform: capitalize; */
+  color: #262e3a;
+}
+.Afiliyo-App-Section p {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 160%;
+  text-align: center;
+  color: #262e3a;
+  margin-top: 40px;
+}
+.number-text {
+  display: flex;
+  align-items: center;
+}
+.backg-bg {
+  padding: 30px 90px;
+}
+.shop-product-blackbg h1,
+.shop-second-title h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 90px;
+  text-align: end;
+  position: relative;
+  z-index: 1;
+}
+.ern-about-text h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+}
+.about-ern-text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+.underline-first {
+  display: inline-block;
+  line-height: 0.1em;
+  border-bottom: 0.3em solid rgba(91, 185, 153, 0.95);
+  float: right;
+}
+.underline-second {
+  display: inline-block;
+  line-height: 0.1em;
+  border-bottom: 0.3em solid rgba(91, 185, 153, 0.95);
+  float: right;
+}
+.underline-third {
+  display: inline-block;
+  line-height: 0.1em;
+  border-bottom: 0.3em solid rgba(91, 185, 153, 0.95);
+}
+.shop-second-title {
+  margin-top: 60px;
+}
+.bg-grey-about {
+  background: #f7f7f7;
+  padding-top: 30px;
+}
+.bg-grey-shop-about {
+  background: #f7f7f7;
+  /* margin: 80px 0; */
+  /* padding: 50px 0; */
+}
+.btn-down-link ul li {
+  display: inline-block;
+  padding: 0 10px;
+}
+.row-space-about{
+  padding: 80px 0;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mbl-title-border-purple{
+    border-bottom: 0.3em solid rgba(202, 60, 255, 0.9);;
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 44px;
+    color: #262e3a;
+  }
+  .mbl-title-border-second-purple{
+    font-size: 44px;
+    border-bottom: 0.3em solid rgba(202, 60, 255, 0.9);;
+    display: inline-block;
+    line-height: 0.1em;
+    color: #262e3a;
+  }
+  .affiliate-title h2{
+    line-height: 52px !important;
+    border: none;
+    font-weight: 800;
+  }
+  .mbl-title-border-yellow{
+    border-bottom: 0.3em solid rgba(242, 174, 0, 0.95);
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 40px;
+    color: #262e3a;
+  }
+  .mbl-title-border-second-yellow{
+    font-size: 40px;
+    border-bottom: 0.3em solid rgba(242, 174, 0, 0.95);
+    display: inline-block;
+    line-height: 0.1em;
+    color: #262e3a;
+  }
+  .brands-title h2{
+    line-height: 32px !important;
+    border: none;
+    font-weight: 600;
+  }
+  .shop-product-blackbg h1 {
+    font-size: 60px;
+  }
+  .shop-second-title h1 {
+    font-size: 58px;
+  }
+  .ern-about-text h1 {
+    font-size: 70px;
+    margin-top: 50px;
+  }
+  .brands-title.dash-comn-title h2 {
+    font-size: 52px;
+  }
+  .bx-text-right {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .mbl-title-border-blue{
+    border-bottom: 0.3em solid rgb(13 87 255);
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 30px;
+    color: #262e3a;
+  }
+  .mbl-title-border-second-blue{
+    font-size: 30px;
+    border-bottom: 0.3em solid rgb(13 87 255);
+    display: inline-block;
+    line-height: 0.1em;
+    color: #262e3a;
+  }
+  .influencers-title h2{
+    line-height: 35px !important;
+    border: none;
+    font-weight: 600;
+  }
+  .mbl-title-border-yellow{
+    border-bottom: 0.3em solid rgba(242, 174, 0, 0.95);
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 35px;
+    color: #262e3a;
+  }
+  .mbl-title-border-second-yellow{
+    font-size: 35px;
+    border-bottom: 0.3em solid rgba(242, 174, 0, 0.95);
+    display: inline-block;
+    line-height: 0.1em;
+    color: #262e3a;
+  }
+  .brands-title h2{
+    line-height: 32px !important;
+    border: none;
+    font-weight: 600;
+  }
+  .mbl-title-border-green{
+    border-bottom: 0.3em solid rgba(91, 185, 153, 0.95);
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 30px;
+    color: #262e3a;
+  }
+  .about-title h2{
+    line-height: 23px !important;
+    border: none;
+    font-weight: 600;
+  }
+  .mbl-title-border-purple{
+    border-bottom: 0.3em solid rgba(202, 60, 255, 0.9);;
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 30px;
+    color: #262e3a;
+  }
+  .mbl-title-border-second-purple{
+    font-size: 30px;
+    border-bottom: 0.3em solid rgba(202, 60, 255, 0.9);;
+    display: inline-block;
+    line-height: 0.1em;
+    color: #262e3a;
+  }
+  .affiliate-title h2{
+    line-height: 32px !important;
+    border: none;
+    font-weight: 600;
+  } 
+
+  .dash-comn-title.affiliate-title h2 {
+    font-size: 17px !important;
+}
+  .About-App-Features p {
+    font-size: 17px !important;
+  }
+  .About-App-Features h3 {
+    font-size: 20px !important;
+  }
+  .About-App-Features h2 {
+    font-size: 30px !important;
+    margin-top: 40px !important;
+  }
+  .padding-remove-top {
+    padding-top: 0 !important;
+  }
+  .backg-bg {
+    margin-bottom: 20px !important;
+  }
+  .des-text{
+    margin-top: 0;
+  }
+}
+@media(min-width: 992px) and (max-width: 1024px){
+  .mbl-title-border-purple{
+    border-bottom: 0.3em solid rgba(202, 60, 255, 0.9);;
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 54px;
+    color: #262e3a;
+  }
+  .mbl-title-border-second-purple{
+    font-size: 54px;
+    border-bottom: 0.3em solid rgba(202, 60, 255, 0.9);;
+    display: inline-block;
+    line-height: 0.1em;
+    color: #262e3a;
+  }
+  .affiliate-title h2{
+    line-height: 52px !important;
+    border: none;
+    font-weight: 800;
+  }
+}
+@media (min-width: 992px) and (max-width: 1595px) {
+ 
+  .ern-about-text h1 {
+    font-size: 56px;
+  }
+  .shop-product-blackbg h1,
+  .shop-second-title h1 {
+    font-size: 78px;
+  }
+}
+@media (max-width: 375px) {
+  .shop-product-blackbg h1 {
+    font-size: 28px;
+  }
+  .shop-second-title h1 {
+    font-size: 28px;
+  }
+  .ern-about-text h1 {
+    font-size: 30px;
+  }
+  .padding-top-earn {
+    margin-top: 0px !important;
+  }
+  .des-text {
+    font-size: 15px;
+  }
+  .about-ern-text p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+  .btn-down-link a{
+    font-size: 14px;;
+  }
+  .btn-down-link ul li{
+    padding: 0 2px;
+  }
+  .shop-product-blackbg h1 {
+    font-size: 27px;
+  }
+  .shop-second-title h1 {
+    font-size: 27px;
+  }
+  .ern-about-text h1 {
+    font-size: 29px;
+  }
+  .padding-top-earn {
+    margin-top: 0px !important;
+  }
+  .des-text {
+    font-size: 15px;
+  }
+  .about-ern-text p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 426px) and (max-width: 767px) {
+  .mbl-title-border-blue{
+    border-bottom: 0.3em solid rgb(13 87 255);
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 37px;
+    color: #262e3a;
+  }
+  .mbl-title-border-second-blue{
+    font-size: 37px;
+    border-bottom: 0.3em solid rgb(13 87 255);
+    display: inline-block;
+    line-height: 0.1em;
+    font-weight: 600;
+    color: #262e3a;
+  }
+  .influencers-title h2{
+    line-height: 23px !important;
+    border: none;
+    font-weight: 600;
+  }
+  .mbl-title-border-yellow{
+    border-bottom: 0.3em solid rgba(242, 174, 0, 0.95);
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 37px;
+    color: #262e3a;
+  }
+  .mbl-title-border-second-yellow{
+    font-size: 37px;
+    border-bottom: 0.3em solid rgba(242, 174, 0, 0.95);
+    display: inline-block;
+    line-height: 0.1em;
+    color: #262e3a;
+  }
+  .brands-title h2{
+    line-height: 32px !important;
+    border: none;
+    font-weight: 600;
+  }
+  .mbl-title-border-green{
+    border-bottom: 0.3em solid rgba(91, 185, 153, 0.95);
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 37px;
+    color: #262e3a;
+  }
+  .about-title h2{
+    line-height: 23px !important;
+    border: none;
+    font-weight: 600;
+  }
+  .mbl-title-border-purple{
+    border-bottom: 0.3em solid rgba(202, 60, 255, 0.9);;
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 37px;
+    color: #262e3a;
+  }
+  .mbl-title-border-second-purple{
+    font-size: 37px;
+    border-bottom: 0.3em solid rgba(202, 60, 255, 0.9);;
+    display: inline-block;
+    line-height: 0.1em;
+    color: #262e3a;
+  }
+  .affiliate-title h2{
+    line-height: 32px !important;
+    border: none;
+    font-weight: 600;
+  } 
+  .shop-product-blackbg h1 {
+    font-size: 30px;
+  }
+  .shop-second-title h1 {
+    font-size: 30px;
+  }
+  .ern-about-text h1 {
+    font-size: 30px;
+  }
+}
+.mbl-down-arrow-display{
+  display: none;
+}
+@media (max-width: 767px) {
+  /* .mbl-scroll-btn{
+    display: none !important;
+  }
+ .mbl-down-arrow-display{
+   display: block;
+ }
+ .mbl-down-arrow-display i{
+   color: #fff;
+ }
+ .scrolled .mbl-down-arrow-display{
+   display: none;
+ } */
+  .backg-bg {
+    padding: 30px 30px;
+}
+  .bg-grey-about {
+    background: #f7f7f7;
+    padding-top: 20px;
+  }
+  .number-text h3 {
+    font-size: 17px;
+  }
+  .influencers-title.dash-comn-title h2 {
+    font-size: 22px !important;
+  }
+
+  .dash-comn-title {
+    padding-top: 30px;
+  }
+  .des-text {
+    height: auto;
+  }
+  .bx-text-right {
+    margin-top: 20px;
+  }
+  .About-App-Features {
+    padding: 0 40px;
+  }
+  .shop-second-title {
+    margin-top: 23px;
+  }
+  .number-tex h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  .btn-down-link ul {
+    display: inherit !important;
+  }
+  .btn-down-link ul li {
+    display: inherit;
+    padding: 0 3px;
+  }
+}
+
+@media (min-width: 1596px) and (max-width: 1652px) {
+  .ern-about-text h1 {
+    font-size: 100px;
+  }
+}
+.about-padding-btn {
+  padding: 10px 20px !important;
+}
+
+@media(min-width: 1025px) and (max-width: 1250px){
+  .mbl-title-border-purple{
+    border-bottom: 0.3em solid rgba(202, 60, 255, 0.9);;
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 54px;
+    color: #262e3a;
+  }
+  .mbl-title-border-second-purple{
+    font-size: 54px;
+    border-bottom: 0.3em solid rgba(202, 60, 255, 0.9);;
+    display: inline-block;
+    line-height: 0.1em;
+    color: #262e3a;
+  }
+  .affiliate-title h2{
+    line-height: 52px !important;
+    border: none;
+    font-weight: 800;
+  }
+}
+@media(min-width: 1251px) and (max-width: 1660px){
+  .mbl-title-border-purple{
+    border-bottom: 0.3em solid rgba(202, 60, 255, 0.9);;
+    display: inline-block;
+    line-height: 0.1em;
+    font-size: 64px;
+    color: #262e3a;
+  }
+  .mbl-title-border-second-purple{
+    font-size: 64px;
+    border-bottom: 0.3em solid rgba(202, 60, 255, 0.9);;
+    display: inline-block;
+    line-height: 0.1em;
+    color: #262e3a;
+  }
+  .affiliate-title h2{
+    line-height: 60px !important;
+    border: none;
+    font-weight: 800;
+  }
+  .influencers-title h2 {
+    display: inline-block;
+    line-height: 0.1em;
+    border-bottom: 0.3em solid rgb(13 87 255);
+    color: #262e3a;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+}
+}
+
+@media(max-width:991px){
+  .mbl-privacy-policy{
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .desktop-privacy-link{
+    display: none !important;
+  }
+  .mbl-privacy-policy ul li a{
+    color: #262e3a;
+  }
+}
+.mbl-privacy-policy{
+  display: none;
+}

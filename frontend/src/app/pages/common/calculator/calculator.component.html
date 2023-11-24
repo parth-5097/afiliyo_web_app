@@ -1,0 +1,135 @@
+<div class="slider-bg h-100">
+  <div class="container-fluid h-100 position-set">
+    <div class="row heaser-fix" id="navbar-hide">
+      <div class="col-12">
+        <header class="trigger-menu-wrapper">
+          <div
+            class="img d-flex align-items-center justify-content-between trigger-menu"
+          >
+            <a [routerLink]="['/']" class="calculater-logo">
+              <img
+                src="assets/images/afliyo_logo_main.svg"
+                alt=""
+                class="menu-icon"
+              />
+            </a>
+
+            <span style="cursor: pointer" class="desktop-hide">
+              <img
+                src="assets/images/812847%201.svg"
+                alt=""
+                class="bell-icon cust-main-sec-tg"
+              />
+            </span>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div
+      class="row Pt-5 align-items-center h-100"
+      style="height: 100vh !important"
+    >
+      <div class="col-12">
+        <div class="row pb-4">
+          <div class="col col-12 col-lg-10 col-xl-8 m-auto">
+            <div class="main-heading">
+              <h1>Enter Your average monthly stats.</h1>
+              <p>
+                If you don’t know your stats offhand, use the example metrics
+                provided. At the end of this calculation, we'll <br />send you
+                your customized data to share with your organization.
+              </p>
+            </div>
+            <form [formGroup]="calculatorForm" (ngSubmit)="onRequest()">
+              <div
+                id="allInput"
+                class="row d-flex flex-column flex-md-row padding-mbl"
+              >
+                <div class="col py-4 input-container offset-custom">
+                  <input
+                    class="calc-input"
+                    type="number"
+                    autocomplete="off"
+                    min="0"
+                    name="shoppers"
+                    id="numShoppers"
+                    placeholder="1000000"
+                    formControlName="siteVisitor"
+                    [ngClass]="{
+                      'is-invalid': submitted && f.siteVisitor.errors
+                    }"
+                    onkeydown="javascript: return event.keyCode == 69 || event.keyCode == 107 || event.keyCode == 109 ? false : true"
+                  />
+                  <div class="calc-label">Site Visitors</div>
+                </div>
+                <div class="col py-4 input-container">
+                  <input
+                    class="calc-input"
+                    type="number"
+                    autocomplete="off"
+                    min="0"
+                    id="rateNon"
+                    name="rate"
+                    placeholder="04"
+                    formControlName="convRate"
+                    [ngClass]="{
+                      'is-invalid': submitted && f.convRate.errors
+                    }"
+                    onkeydown="javascript: return event.keyCode == 69 || event.keyCode == 107 || event.keyCode == 109 ? false : true"
+                  />
+                  <div class="calc-label">Conversion Rate (%)</div>
+                </div>
+                <div class="col py-4 input-container">
+                  <input
+                    class="calc-input"
+                    type="number"
+                    autocomplete="off"
+                    min="0"
+                    id="aovNon"
+                    name="aov"
+                    placeholder="100"
+                    formControlName="avgOrder"
+                    [ngClass]="{
+                      'is-invalid': submitted && f.avgOrder.errors
+                    }"
+                    onkeydown="javascript: return event.keyCode == 69 || event.keyCode == 107 || event.keyCode == 109 ? false : true"
+                  />
+                  <div class="calc-label">Average Order Value</div>
+                </div>
+                <div class="col py-4 input-container">
+                  <input
+                    class="calc-input"
+                    type="number"
+                    autocomplete="off"
+                    min="0"
+                    id="freqNon"
+                    name="freq"
+                    placeholder="02"
+                    formControlName="customer"
+                    [ngClass]="{
+                      'is-invalid': submitted && f.customer.errors
+                    }"
+                    onkeydown="javascript: return event.keyCode == 69 || event.keyCode == 107 || event.keyCode == 109 ? false : true"
+                  />
+                  <div class="calc-label">Purchases/Customer</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="bx-text-right pt-3 text-center">
+                    <a
+                      href="javascript:void(0)"
+                      class="learn-more-btn next-btn"
+                      (click)="onRequest()"
+                      >next</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

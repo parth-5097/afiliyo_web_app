@@ -1,0 +1,117 @@
+<main class="content-wrapper-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div
+          class="
+            inr-title-comn
+            d-sm-flex
+            align-items-center
+            justify-content-between
+          "
+        >
+          <h1>Details</h1>
+          <div class="inr-title-btn">
+            <button
+              type="button"
+              class="btn btn-reset mr-2"
+              [routerLink]="['/admin/post/edit', data.id]"
+            >
+              Edit
+            </button>
+            <button
+              type="button"
+              class="btn btn btn-inr-top"
+              (click)="onDelete()"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="dash-box-white">
+          <div class="post-dtls">
+            <span class="number-text">View</span>
+            <img
+              src="{{ baseUrl }}{{ data.profile_pic_img }}"
+              alt=""
+              height="10%"
+              width="10%"
+            />
+            <div class="clearfix post-dtls-body mb-4">
+              <div class="profile-section-main-inner-body-inr-part">
+                <h4>Name</h4>
+                <p>{{ data.name }}</p>
+              </div>
+              <div class="profile-section-main-inner-body-inr-part">
+                <h4>User Name</h4>
+                <p>{{ data.username }}</p>
+              </div>
+              <div class="profile-section-main-inner-body-inr-part">
+                <h4>Region</h4>
+                <p>{{ data.region }}</p>
+              </div>
+              <div class="profile-section-main-inner-body-inr-part">
+                <h4>Id</h4>
+                <p>{{ data.id }}</p>
+              </div>
+              <div class="profile-section-main-inner-body-inr-part">
+                <h4>User Id</h4>
+                <p>{{ data.user_id }}</p>
+              </div>
+              <div class="profile-section-main-inner-body-inr-part">
+                <h4>Item Id</h4>
+                <p>{{ data.item_id }}</p>
+              </div>
+              <div class="profile-section-main-inner-body-inr-part">
+                <h4>Image</h4>
+                <p>{{ data.image }}</p>
+              </div>
+              <div class="profile-section-main-inner-body-inr-part">
+                <h4>Description</h4>
+                <p>{{ data.description }}</p>
+              </div>
+              <div class="profile-section-main-inner-body-inr-part">
+                <h4>Reach</h4>
+                <p>{{ data.reach }}</p>
+              </div>
+              <div class="profile-section-main-inner-body-inr-part">
+                <h4>Impression</h4>
+                <p>{{ data.impression }}</p>
+              </div>
+              <div class="profile-section-main-inner-body-inr-part">
+                <h4>Items</h4>
+                <pre>{{ data.items }}</pre>
+              </div>
+            </div>
+            <div class="post-dtls-image">
+              <ngx-slick-carousel
+                class="carousel"
+                #slickModal="slick-carousel"
+                [config]="slideConfig"
+              >
+                <div
+                  ngxSlickItem
+                  *ngFor="let slide of images"
+                  class="slide"
+                  style="height: auto"
+                >
+                  <video
+                    poster="{{ baseUrl }}{{ slide }}"
+                    width="100%"
+                    height="auto"
+                    autoplay
+                  >
+                    <source src="{{ baseUrl }}{{ slide }}" />
+                  </video>
+                </div>
+              </ngx-slick-carousel>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay toggle-icon-main"></div>
+</main>

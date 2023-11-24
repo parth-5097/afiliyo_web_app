@@ -1,0 +1,102 @@
+<main class="content-wrapper-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="inr-title-comn d-flex align-items-center">
+          <h1>Posts</h1>
+          <div class="inr-title-btn ml-auto">
+            <button
+              type="button"
+              class="btn btn btn-reset"
+              (click)="onExport()"
+            >
+              Export
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="dash-box-white">
+          <div class="tab-content">
+            <div
+              class="tab-pane fade active show"
+              id="pills-All"
+              role="tabpanel"
+              aria-labelledby="pills-All-tab"
+            >
+              <table
+                datatable
+                [dtOptions]="dtOptions"
+                [dtTrigger]="dtTrigger"
+                id="Customers-list"
+                class="display"
+              >
+                <thead>
+                  <tr>
+                    <th>Action</th>
+                    <th>Region</th>
+                    <th>Id</th>
+                    <th>User Id</th>
+                    <th>Item Id</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Description</th>
+                    <th>Hashtag</th>
+                    <th>Likes</th>
+                    <th>Reach</th>
+                    <th>Impression</th>
+                  </tr>
+                </thead>
+                <tbody *ngIf="data?.length != 0">
+                  <tr *ngFor="let person of data; index as i">
+                    <td>
+                      <a [routerLink]="['edit', person.id]">
+                        <img
+                          src="assets/images/edit-icon-table.svg"
+                          class="mx-2 table-img-inr"
+                          alt=""
+                        />
+                      </a>
+                      <a [routerLink]="['view']" [state]="person">
+                        <i class="fa fa-database" aria-hidden="true"></i>
+                      </a>
+                      <a href="javascript:void(0)">
+                        <img
+                          src="assets/images/analytics.png"
+                          class="mx-2 table-img-inr"
+                          alt=""
+                        />
+                      </a>
+                      <a
+                        href="javascript:void(0)"
+                        (click)="onDelete(person.id)"
+                      >
+                        <img
+                          src="assets/images/delete-icon.svg"
+                          class="mx-2 table-img-inr"
+                          alt=""
+                        />
+                      </a>
+                    </td>
+                    <td>{{ person.region }}</td>
+                    <td>{{ person.id }}</td>
+                    <td>{{ person.user_id }}</td>
+                    <td>{{ person.item_id }}</td>
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.username }}</td>
+                    <td>{{ person.description }}</td>
+                    <td>{{ person.hashtag }}</td>
+                    <td>{{ person.likes }}</td>
+                    <td>{{ person.reach }}</td>
+                    <td>{{ person.impression }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay toggle-icon-main"></div>
+</main>

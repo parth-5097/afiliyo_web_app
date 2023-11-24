@@ -1,0 +1,26 @@
+build website:
+  stage: build
+  image: node:14
+  tags:
+    - local_to_s3
+  script:
+    - npm --version
+    - pwd
+  artifacts:
+    paths:
+      - dist
+  only:
+    - parthiv_frontend
+# deploy to s3:
+#   stage: deploy
+#   image:
+#     name: amazon/aws-cli
+#     entrypoint: [""]
+#   tags:
+#     - local_to_s3
+#   script:
+#     - aws --version
+#     - aws s3 rm s3://$S3_BUCKET --recursive
+#     - aws s3 cp dist s3://$S3_BUCKET --recursive
+#   only:
+#     - parthiv_frontend

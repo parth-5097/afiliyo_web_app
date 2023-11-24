@@ -1,0 +1,359 @@
+<main class="content-wrapper-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="inr-title-comn d-sm-flex align-items-center">
+          <h1>Dashboard</h1>
+        </div>
+      </div>
+      <div class="col-12 mb-3 time-bx-col">
+        <div class="row justify-content-center mr-0">
+          <div class="col-xl-2 col-md-4 col-sm-6 mb-3 mb-xl-0 pr-0">
+            <div class="dash-white-bx">
+              <div class="d-flex align-items-center">
+                <div class="dash-box-round">
+                  <img src="assets/images/india-flag.svg" alt="" />
+                </div>
+                <div class="dash-box-text ml-4">
+                  <p>{{ time[0]?.name }}</p>
+                  <span>{{ time[0]?.time }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-md-4 col-sm-6 mb-3 mb-xl-0 pr-0">
+            <div class="dash-white-bx">
+              <div class="d-flex align-items-center">
+                <div class="dash-box-round">
+                  <img src="assets/images/usa-flag.svg" alt="" />
+                </div>
+                <div class="dash-box-text ml-4">
+                  <p>{{ time[1]?.name }}</p>
+                  <span>{{ time[1]?.time }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-md-4 col-sm-6 mb-3 mb-xl-0 pr-0">
+            <div class="dash-white-bx">
+              <div class="d-flex align-items-center">
+                <div class="dash-box-round">
+                  <img src="assets/images/canada-flag.svg" alt="" />
+                </div>
+                <div class="dash-box-text ml-4">
+                  <p>{{ time[2]?.name }}</p>
+                  <span>{{ time[2]?.time }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-md-4 col-sm-6 mb-3 mb-xl-0 pr-0">
+            <div class="dash-white-bx">
+              <div class="d-flex align-items-center">
+                <div class="dash-box-round">
+                  <img src="assets/images/hongkong-flag.svg" alt="" />
+                </div>
+                <div class="dash-box-text ml-4">
+                  <p>{{ time[3]?.name }}</p>
+                  <span>{{ time[3]?.time }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-md-4 col-sm-6 mb-3 mb-xl-0 pr-0">
+            <div class="dash-white-bx">
+              <div class="d-flex align-items-center">
+                <div class="dash-box-round">
+                  <img src="assets/images/belgium-flag.svg" alt="" />
+                </div>
+                <div class="dash-box-text ml-4">
+                  <p>{{ time[4]?.name }}</p>
+                  <span>{{ time[4]?.time }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-md-4 col-sm-6 mb-3 mb-xl-0 pr-0">
+            <div class="dash-white-bx">
+              <div class="d-flex align-items-center">
+                <div class="dash-box-round">
+                  <img src="assets/images/russia-flag.svg" alt="" />
+                </div>
+                <div class="dash-box-text ml-4">
+                  <p>{{ time[5]?.name }}</p>
+                  <span>{{ time[5]?.time }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-md-3 mb-4 stretch-card transparent">
+            <div class="card card-tale">
+              <div class="card-body">
+                <p class="mb-4">Total Active User</p>
+                <p class="fs-30 mb-2">{{ live_data.activeUser }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 stretch-card transparent">
+            <div class="card card-tale">
+              <div class="card-body">
+                <p class="mb-4">Total User</p>
+                <p class="fs-30 mb-2">{{ live_data.totalAfilioUser }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 stretch-card transparent">
+            <div class="card card-tale">
+              <div class="card-body">
+                <p class="mb-4">Total Post</p>
+                <p class="fs-30 mb-2">{{ live_data.totalPost }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 stretch-card transparent">
+            <div class="card card-dark-blue">
+              <div class="card-body">
+                <p class="mb-4">Total Item</p>
+                <p class="fs-30 mb-2">{{ live_data.totalItem }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-md-3 mb-4 stretch-card transparent">
+            <div class="card card-tale">
+              <div class="card-body">
+                <p class="mb-4">Total brand</p>
+                <p class="fs-30 mb-2">{{ live_data.totalBrand }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 stretch-card transparent">
+            <div class="card card-tale">
+              <div class="card-body">
+                <p class="mb-4">Total reports on Post</p>
+                <p class="fs-30 mb-2">{{ live_data.totalPostReport }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 stretch-card transparent">
+            <div class="card card-tale">
+              <div class="card-body">
+                <p class="mb-4">Total live viewer on posts</p>
+                <p class="fs-30 mb-2">
+                  {{ live_data.totalLivePostViewer }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 stretch-card transparent">
+            <div class="card card-dark-blue">
+              <div class="card-body">
+                <p class="mb-4">Total Orders</p>
+                <p class="fs-30 mb-2">61344</p>
+                <p>22.00% (30 days)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 filter-dash">
+        <select class="custom-select  mb-3" name="" (change)="onFilter($event.target.value)">
+          <option value="7">7 Days</option>
+          <option selected value="30">1 Month</option>
+          <option value="180">6 Month</option>
+          <option value="365">365 Days</option>
+        </select>
+        <div class="row">
+          <div class="col-md-4 mb-4 stretch-card transparent">
+            <div class="card card-tale">
+              <div class="card-body">
+                <div class="dash-chart-main">
+                  <span class="dash-chart-tag"
+                    >Post Created on different dates</span
+                  >
+                  <div class="dash-chart-main-text d-flex align-items-center">
+                    <p>{{ live_data.totalPost }}</p>
+                  </div>
+                  <div id="chart-cash-of-hand">
+                    <apx-chart
+                      [series]="postCountOnDifferentDay?.series"
+                      [chart]="postCountOnDifferentDay?.chart"
+                      [colors]="postCountOnDifferentDay?.colors"
+                      [dataLabels]="postCountOnDifferentDay?.dataLabels"
+                      [stroke]="postCountOnDifferentDay?.stroke"
+                      [grid]="postCountOnDifferentDay?.grid"
+                      [legend]="postCountOnDifferentDay?.legend"
+                      [fill]="postCountOnDifferentDay?.fill"
+                      [xaxis]="postCountOnDifferentDay?.xaxis"
+                      [yaxis]="postCountOnDifferentDay?.yaxis"
+                    ></apx-chart>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 stretch-card transparent">
+            <div class="card card-tale">
+              <div class="card-body">
+                <div class="dash-chart-main">
+                  <span class="dash-chart-tag"
+                    >Item created on different dates</span
+                  >
+                  <div class="dash-chart-main-text d-flex align-items-center">
+                    <p>{{ live_data.totalItem }}</p>
+                  </div>
+                  <div id="chart-cash-of-hand">
+                    <apx-chart
+                      [series]="itemCountOnDifferentDay?.series"
+                      [chart]="itemCountOnDifferentDay?.chart"
+                      [colors]="itemCountOnDifferentDay?.colors"
+                      [dataLabels]="itemCountOnDifferentDay?.dataLabels"
+                      [stroke]="itemCountOnDifferentDay?.stroke"
+                      [grid]="itemCountOnDifferentDay?.grid"
+                      [legend]="itemCountOnDifferentDay?.legend"
+                      [fill]="itemCountOnDifferentDay?.fill"
+                      [xaxis]="itemCountOnDifferentDay?.xaxis"
+                      [yaxis]="itemCountOnDifferentDay?.yaxis"
+                    ></apx-chart>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 stretch-card transparent">
+            <div class="card card-tale">
+              <div class="card-body">
+                <div class="dash-chart-main">
+                  <span class="dash-chart-tag"
+                    >User created on different dates</span
+                  >
+                  <div class="dash-chart-main-text d-flex align-items-center">
+                    <p>{{ live_data.totalAfilioUser }}</p>
+                  </div>
+                  <div id="chart-total-sale">
+                    <apx-chart
+                      [series]="userCountOnDifferentDay?.series"
+                      [chart]="userCountOnDifferentDay?.chart"
+                      [colors]="userCountOnDifferentDay?.colors"
+                      [dataLabels]="userCountOnDifferentDay?.dataLabels"
+                      [stroke]="userCountOnDifferentDay?.stroke"
+                      [grid]="userCountOnDifferentDay?.grid"
+                      [legend]="userCountOnDifferentDay?.legend"
+                      [fill]="userCountOnDifferentDay?.fill"
+                      [xaxis]="userCountOnDifferentDay?.xaxis"
+                      [yaxis]="userCountOnDifferentDay?.yaxis"
+                    ></apx-chart>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4 stretch-card transparent">
+            <div class="card card-tale">
+              <div class="card-body">
+                <div class="dash-chart-main">
+                  <span class="dash-chart-tag"
+                    >Item with gender difference</span
+                  >
+                  <div class="dash-chart-main-text d-flex align-items-center">
+                    <p>
+                      {{ GenderDifferenceOnItem?.series[0] }} Male &nbsp;&nbsp;
+                    </p>
+                    <p>
+                      {{ GenderDifferenceOnItem?.series[1] }} Female
+                      &nbsp;&nbsp;
+                    </p>
+                    <p>
+                      {{ GenderDifferenceOnItem?.series[2] }} Not Specified
+                      &nbsp;&nbsp;
+                    </p>
+                  </div>
+                  <div id="chart-cash-of-hand">
+                    <apx-chart
+                      [series]="GenderDifferenceOnItem?.series"
+                      [chart]="GenderDifferenceOnItem?.chart"
+                      [colors]="GenderDifferenceOnItem?.colors"
+                      [dataLabels]="GenderDifferenceOnItem?.dataLabels"
+                      [stroke]="GenderDifferenceOnItem?.stroke"
+                      [legend]="GenderDifferenceOnItem?.legend"
+                      [fill]="GenderDifferenceOnItem?.fill"
+                      [markers]="GenderDifferenceOnItem?.markers"
+                    ></apx-chart>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 stretch-card transparent">
+            <div class="card card-tale">
+              <div class="card-body">
+                <div class="dash-chart-main">
+                  <span class="dash-chart-tag"
+                    >Users with gender difference</span
+                  >
+                  <div class="dash-chart-main-text d-flex align-items-center">
+                    <p>
+                      {{ GenderDifferenceOnUser?.series[0] }} Male &nbsp;&nbsp;
+                    </p>
+                    <p>
+                      {{ GenderDifferenceOnUser?.series[1] }} Female
+                      &nbsp;&nbsp;
+                    </p>
+                    <p>
+                      {{ GenderDifferenceOnUser?.series[2] }} Not Specified
+                      &nbsp;&nbsp;
+                    </p>
+                  </div>
+                  <div id="chart-cash-of-hand">
+                    <apx-chart
+                      [series]="GenderDifferenceOnUser?.series"
+                      [chart]="GenderDifferenceOnUser?.chart"
+                      [colors]="GenderDifferenceOnUser?.colors"
+                      [dataLabels]="GenderDifferenceOnUser?.dataLabels"
+                      [stroke]="GenderDifferenceOnUser?.stroke"
+                      [legend]="GenderDifferenceOnUser?.legend"
+                      [fill]="GenderDifferenceOnUser?.fill"
+                      [markers]="GenderDifferenceOnUser?.markers"
+                    ></apx-chart>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 stretch-card transparent">
+            <div class="card card-tale">
+              <div class="card-body">
+                <div class="dash-chart-main">
+                  <span class="dash-chart-tag">Users based on its region</span>
+                  <div id="chart-total-sale">
+                    <apx-chart
+                      [series]="regionDifferenceOnUser?.series"
+                      [chart]="regionDifferenceOnUser?.chart"
+                      [colors]="regionDifferenceOnUser?.colors"
+                      [dataLabels]="regionDifferenceOnUser?.dataLabels"
+                      [stroke]="regionDifferenceOnUser?.stroke"
+                      [legend]="regionDifferenceOnUser?.legend"
+                      [fill]="regionDifferenceOnUser?.fill"
+                      [markers]="regionDifferenceOnUser?.markers"
+                    ></apx-chart>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay toggle-icon-main"></div>
+</main>

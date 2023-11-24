@@ -1,0 +1,215 @@
+<section>
+  <div class="contact-bg-img">
+    <div class="contact-img">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12">
+            <div class="contact-title">
+              <h3>Get contact</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-12 col-lg-6">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="contact-form">
+            <div class="row">
+              <div class="col-12 col-lg-12">
+                <div class="form-group">
+                  <label>Name</label>
+                  <input
+                    type="text"
+                    class="form-control form-input-box"
+                    placeholder="First Name"
+                    formControlName="name"
+                    [ngClass]="{
+                      'is-invalid': submitted && f.name.errors
+                    }"
+                  />
+                  <div
+                    *ngIf="submitted && f.name.errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="f.name.errors.required">
+                      First name is required
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Email</label>
+                  <input
+                    type="text"
+                    class="form-control form-input-box"
+                    placeholder="Email"
+                    formControlName="email"
+                    [ngClass]="{
+                      'is-invalid': submitted && f.email.errors
+                    }"
+                  />
+                  <div
+                    *ngIf="submitted && f.email.errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email || f.email.errors.pattern">
+                      Email must be a valid email address
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Mobile Number</label>
+                  <input
+                    type="text"
+                    class="form-control form-input-box"
+                    formControlName="contactno"
+                    placeholder="Contact Number"
+                    [ngClass]="{
+                      'is-invalid': submitted && f.contactno.errors
+                    }"
+                  />
+                  <div
+                    *ngIf="submitted && f.contactno.errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="f.contactno.errors.required">
+                      Contact no is required
+                    </div>
+                    <div *ngIf="f.contactno.errors.pattern">
+                      Contact no must be valid phone number
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Subject</label>
+                  <input
+                    type="text"
+                    class="form-control form-input-box"
+                    placeholder="Write Your Subject"
+                    formControlName="subject"
+                    [ngClass]="{
+                      'is-invalid': submitted && f.subject.errors
+                    }"
+                  />
+                  <div
+                    *ngIf="submitted && f.subject.errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="f.subject.errors.required">
+                      Subject is required
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Message</label>
+                  <textarea
+                    type="text"
+                    class="form-control form-input-box"
+                    placeholder="Type Message..."
+                    rows="5"
+                    formControlName="message"
+                    [ngClass]="{
+                      'is-invalid': submitted && f.message.errors
+                    }"
+                  ></textarea>
+                  <div
+                    *ngIf="submitted && f.message.errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="f.message.errors.required">
+                      Say something!!!
+                    </div>
+                  </div>
+                </div>
+                <div class="submit-btn text-center">
+                  <button
+                    type="submit"
+                    class="btn btn-submit"
+                    [disabled]="submit"
+                  >
+                    SUBMIT
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div class="contact-question">
+          <h4>Have other questions?</h4>
+          <h3>General Inquiries</h3>
+          <p>Afiliyo Networks LLP.</p>
+          <p>
+            For anything else on your mind, including partnership ideas, say
+            hello:
+          </p>
+        </div>
+        <div class="contact-information-sectopn">
+          <div class="mt-4">
+            <div class="con-icon d-inline-block">
+              <img
+                src="assets/images/call-icon.svg"
+                alt="con-location-icon"
+                class="img-fluid"
+              />
+            </div>
+            <div class="address-content d-inline-block">
+              <h4>Connect on call</h4>
+              <a href="Tel:91-(800)-761-1072"><p>+91-(800)-761-1072</p></a>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="con-icon d-inline-block">
+              <img
+                src="assets/images/email-icon.svg"
+                alt="con-location-icon"
+                class="img-fluid"
+              />
+            </div>
+            <div class="address-content d-inline-block">
+              <h4>Share a detailed specification</h4>
+              <a href="mailto:career@afilio.com"><p>career@afiliyo.com</p></a>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="con-icon d-inline-block">
+              <img
+                src="assets/images/chat-icon.svg"
+                alt="con-location-icon"
+                class="img-fluid"
+              />
+            </div>
+            <div class="address-content d-inline-block">
+              <h4>Begin a quick discussion</h4>
+              <a href="javascript:void(0);"><p>Live chat with us</p></a>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="con-icon d-inline-block">
+              <img
+                src="assets/images/location-icon.svg"
+                alt="con-location-icon"
+                class="img-fluid"
+              />
+            </div>
+            <div class="address-content d-inline-block">
+              <h4>Address</h4>
+              <a href="javascript:void(0);"
+                ><p>
+                  198/200, 10th Khetwadi Lane, Earth Sampann Chs ltd, Ground
+                  floor, Shop -5, Mumbai-400004, India.
+                </p></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

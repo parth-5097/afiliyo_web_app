@@ -1,0 +1,64 @@
+<main class="content-wrapper-section">
+  <div class="container-fluid">
+    <div *ngIf="data" class="row">
+      <div class="col-12">
+        <div class="profile-section-main">
+          <div
+            class="profile-section-imgs"
+            style="
+              background: url('{{ data.background_img }}');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          ></div>
+          <div class="profile-section-btm">
+            <img src="{{ data.profile_pic_img }}" alt="" />
+            <div class="profile-section-btm-text">
+              <span>{{ data.name }}</span>
+              <p>Admin</p>
+            </div>
+          </div>
+          <div class="profile-section-btns profile-edit">
+            <a [routerLink]="['edit']">
+              <img src="assets/images/pro-edit-icon.svg" class="mr-1" />
+              <span>Edit Profile</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="profile-section-main-inner">
+          <div class="profile-section-main-inner-hdr">
+            <span>Profile Details</span>
+          </div>
+          <div class="profile-section-main-inner-body py-3">
+            <form class="row m-0">
+              <div class="col-lg-3 col-md-6 form-group">
+                <label class="dash-label">Name : {{ data.name }}</label>
+              </div>
+              <div class="col-lg-3 col-md-6 form-group">
+                <label class="dash-label"
+                  >User Name : {{ data.username }}</label
+                >
+              </div>
+              <div class="col-lg-3 col-md-6 form-group">
+                <label class="dash-label">Email : {{ data.email }}</label>
+              </div>
+              <div class="col-lg-3 col-md-6 form-group">
+                <label class="dash-label"
+                  >Mobile No. : {{ data.phoneNumber }}</label
+                >
+              </div>
+              <div class="col-12 form-group">
+                <label class="dash-label">
+                  {{ data.bio }}
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay toggle-icon-main"></div>
+</main>

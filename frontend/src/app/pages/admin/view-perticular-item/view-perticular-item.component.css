@@ -1,0 +1,40 @@
+.number-text {
+  display: block;
+  color: #262e3a;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.profile-section-main-inner-body-inr-part {
+  border-bottom: 1px solid #2632381a;
+  padding: 15px 0;
+  width: 50%;
+  display: inline-block;
+  float: left;
+}
+
+.profile-section-main-inner-body-inr-part h4 {
+  color: #007aff;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 16px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-section-main-inner-body-inr-part p {
+  margin-bottom: 0;
+  color: #262e3a;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post-dtls {
+  margin-bottom: 15px;
+}

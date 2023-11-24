@@ -1,0 +1,73 @@
+body {
+  overflow-y: auto;
+}
+.privacy-policy-page h3 {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+.privacy-content ul {
+  list-style: disc;
+}
+.privacy-content ul li {
+  margin: 15px 15px;
+}
+.privacy-policy-page {
+  margin: 0 10px;
+}
+.privacy-content ul.sub-text {
+  list-style: lower-alpha;
+  padding-left: 30px;
+}
+.privacy-content ul.sub-text ul.sub-point {
+  list-style: lower-roman;
+  padding-left: 30px;
+}
+.privacy-content ul.sub-text-disc {
+  list-style: disc;
+  padding-left: 30px;
+}
+.privacy-content ul.sub-title-inner {
+  list-style: none;
+}
+.privacy-content ul.list-unstyled-none {
+  list-style: none;
+}
+.privacy-content ul.sub-title-inner h5 {
+  font-weight: bold;
+}
+.privacy-content ul.sub-title-inner li {
+  padding-left: 30px;
+}
+.sub-text-disc p {
+  margin-left: 20px;
+}
+a {
+  color: #004fff;
+}
+@media (max-width: 425px) {
+  .privacy-policy-page h3 {
+    font-size: 31px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1370px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1560px;
+  }
+}
+.remove-backgrop-div .notifaction-src-backdroup{
+  background: none !important;
+}

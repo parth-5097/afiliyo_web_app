@@ -1,0 +1,99 @@
+body {
+  overflow-y: auto;
+}
+.bg-content {
+  position: relative;
+  background: #000000;
+  color: #fff;
+  /*padding: 100px 0;*/
+}
+.bg-content:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: 0;
+  background-image: url("/assets/images/influ-bg-apply.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bg-content-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 130px 0;
+}
+/* .bg2-content-img{
+    background-image: url('images/influ-bg2-appy.png');
+    background-position: right center;
+    background-repeat :no-repeat;
+    background-size: contain;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    } */
+.center-section {
+  align-items: center;
+  height: 100%;
+}
+.influencer-bg-color {
+  border: 1px solid;
+  border-top-color: #e6eaee !important;
+  border-right-color: #e6eaee !important;
+  border-bottom-color: #e6eaee !important;
+  color: #000;
+  padding: 40px 40px;
+  background-color: hsla(0, 0%, 100%, 0.85);
+}
+.influ-title p {
+  font-size: 40px;
+  text-align: center;
+  color: #404040 !important;
+}
+.influ-text p {
+  letter-spacing: 1px;
+  padding-top: 20px;
+  font-size: 20px;
+}
+.btn-apply-inf {
+  background: #404040;
+  color: #ffffff;
+  padding: 8px 30px;
+  width: 70%;
+  text-transform: capitalize;
+}
+.btn-apply-inf:hover {
+  color: #ffffff;
+  background: #000;
+}
+@media (max-width: 767px) {
+  .bg-content-img {
+    padding: 40px 0;
+  }
+  .influ-title p {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .influ-text h3 {
+    font-size: 16px;
+  }
+  .influ-text p {
+    font-size: 14px;
+  }
+}

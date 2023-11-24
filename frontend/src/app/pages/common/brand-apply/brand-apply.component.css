@@ -1,0 +1,240 @@
+body {
+  overflow-y: auto;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: red;
+  outline: 0;
+  box-shadow: none !important;
+}
+.form-input-box {
+  background: #ffffff;
+  /* border: 0.5px solid rgba(0, 38, 46, 0.2); */
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 50px;
+}
+.login-box .form-group label {
+  font-weight: bold;
+  font-size: 16px;
+}
+.form-input-box:focus {
+  border-color: red;
+}
+.brand-text p {
+  font-size: 16px;
+}
+.basic-form h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.brand-btn-next {
+  background: #000;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 8px 30px;
+}
+.brand-btn-next:hover {
+  background: #000;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 8px 30px;
+}
+.progressbar {
+  margin: 50px 0 50px 0;
+  counter-reset: step;
+}
+.progressbar li {
+  list-style-type: none;
+  width: 25%;
+  float: left;
+  font-size: 12px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7d7d7d;
+}
+
+.signup-step-container {
+  padding: 150px 0px;
+  padding-bottom: 60px;
+}
+
+.bg-color {
+  background-color: #333;
+}
+.signup-step-container {
+  padding: 150px 0px;
+  padding-bottom: 60px;
+}
+.wizard .nav-tabs {
+  position: relative;
+  margin-bottom: 0;
+  border-bottom-color: transparent;
+}
+.wizard > div.wizard-inner {
+  position: relative;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.connecting-line {
+  height: 2px;
+  background: #e0e0e0;
+  position: absolute;
+  width: 68%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 15px;
+  z-index: 1;
+}
+.wizard .nav-tabs > li.active > a,
+.wizard .nav-tabs > li.active > a:hover,
+.wizard .nav-tabs > li.active > a:focus {
+  color: #555555;
+  cursor: default;
+  border: 0;
+  border-bottom-color: transparent;
+}
+span.round-tab {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #0e214b;
+  font-weight: 500;
+  border: 1px solid #ddd;
+}
+span.round-tab i {
+  color: #555555;
+}
+.wizard li.active span.round-tab {
+  background: #0db02b;
+  color: #fff;
+  border-color: #0db02b;
+}
+.wizard li.active span.round-tab i {
+  color: #5bc0de;
+}
+.wizard .nav-tabs > li.active > a i {
+  color: #0db02b;
+}
+.wizard .nav-tabs > li {
+  width: 32%;
+}
+.wizard li:after {
+  content: " ";
+  position: absolute;
+  left: 46%;
+  opacity: 0;
+  margin: 0 auto;
+  bottom: 0px;
+  border: 5px solid transparent;
+  border-bottom-color: red;
+  transition: 0.1s ease-in-out;
+}
+.wizard .nav-tabs > li a {
+  width: 30px;
+  height: 30px;
+  margin: 20px auto;
+  border-radius: 100%;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  top: 0;
+}
+.wizard .nav-tabs > li a i {
+  position: absolute;
+  top: 50px;
+  font-style: normal;
+  font-weight: 400;
+  white-space: nowrap;
+  left: 0;
+  transform: translate(6%, -62%);
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin: 0 auto;
+}
+.wizard .nav-tabs > li a:hover {
+  background: transparent;
+}
+.wizard .tab-pane {
+  position: relative;
+  padding-top: 20px;
+}
+.wizard h3 {
+  margin-top: 0;
+}
+.prev-step,
+.next-step {
+  font-size: 13px;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+.prev-step,
+.next-step {
+  background-color: #000;
+  color: #fff;
+}
+.emailcheckbox input[type="checkbox"] + label {
+  display: flex;
+  margin: 0 1.2em;
+  cursor: pointer;
+  padding: 0.2em;
+  font-size: 15px;
+}
+
+.emailcheckbox input[type="checkbox"] {
+  display: none;
+}
+
+.emailcheckbox input[type="checkbox"] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 0px;
+  margin-right: 8px;
+  vertical-align: middle;
+  color: transparent;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.emailcheckbox input[type="checkbox"] + label:active:before {
+  transform: scale(0);
+}
+
+.emailcheckbox input[type="checkbox"]:checked + label:before {
+  background-color: #fff;
+  border-color: #000;
+  color: #49c5b1;
+}
+
+input[type="checkbox"]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+.emailcheckbox input[type="checkbox"]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}

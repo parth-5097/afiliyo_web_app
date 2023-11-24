@@ -1,0 +1,216 @@
+<main class="content-wrapper-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="inr-title-comn">
+          <h1>Edit items</h1>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="dash-box-white">
+          <form>
+            <div class="customer-inr-sec">
+              <h4 class="d-flex align-items-center">
+                <img src="assets/images/list-type2.svg" alt="" />
+                Item Overview --
+                <a href="{{ baseUrl }}/{{ data.link }}" target="_blank">
+                  {{ data.link }}</a
+                >
+              </h4>
+              <div class="row mt-4">
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    [value]="data.item_id"
+                    class="form-control input-style-admin"
+                    disabled
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    name="item_name"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.item_name"
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    name="gender"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.gender"
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="number"
+                    name="price"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.price"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="customer-inr-sec">
+              <h4 class="d-flex align-items-center">
+                <img src="assets/images/list-type2.svg" alt="" />
+                Category Overview
+              </h4>
+              <div class="row mt-4">
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    [value]="data.category_id"
+                    class="form-control input-style-admin"
+                    disabled
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <img
+                    src="{{ baseUrl + data.category_icon_img }}"
+                    alt=""
+                    width="10%"
+                    height="auto"
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    name="category_name"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.category_name"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="customer-inr-sec">
+              <h4 class="d-flex align-items-center">
+                <img src="assets/images/list-type2.svg" alt="" />
+                Brand Overview
+              </h4>
+              <div class="row mt-4">
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    [value]="data.brand_id"
+                    class="form-control input-style-admin"
+                    disabled
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <img
+                    src="{{ baseUrl + data.brand_icon_img }}"
+                    alt=""
+                    width="10%"
+                    height="auto"
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    name="brand_name"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.brand_name"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="customer-inr-sec">
+              <h4 class="d-flex align-items-center">
+                <img src="assets/images/list-type2.svg" alt="" />
+                Color Overview
+              </h4>
+              <div class="row mt-4">
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    [value]="data.color_id"
+                    class="form-control input-style-admin"
+                    disabled
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <img
+                    src="{{ baseUrl + data.color_icon_img }}"
+                    alt=""
+                    width="10%"
+                    height="auto"
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    name="color_name"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.color_name"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="customer-inr-sec">
+              <h4 class="d-flex align-items-center">
+                <img src="assets/images/list-type2.svg" alt="" />
+                Size Overview
+              </h4>
+              <div class="row mt-4">
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    [value]="data.size_id"
+                    class="form-control input-style-admin"
+                    disabled
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <img
+                    src="{{ baseUrl + data.size_icon_img }}"
+                    alt=""
+                    width="10%"
+                    height="auto"
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    name="size_name"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.size_name"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="customer-inr-sec">
+              <h4 class="d-flex align-items-center">
+                <img src="assets/images/list-type2.svg" alt="" />
+                Description
+              </h4>
+              <div class="row mt-4">
+                <div class="col-12 form-group">
+                  <textarea
+                    class="form-control input-style-admin h-auto"
+                    rows="5"
+                    name="description"
+                    [(ngModel)]="data.description"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="btn-btm-inr-tabs text-center mt-sm-5 mt-3">
+              <button
+                type="submit"
+                class="btn btn-reset mr-sm-4 mr-2"
+                (click)="onSubmit()"
+                [disabled]="submit"
+              >
+                Submit
+              </button>
+              <button type="button" class="btn btn-inr-top">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay toggle-icon-main"></div>
+</main>

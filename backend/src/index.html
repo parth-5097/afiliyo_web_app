@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Minimal working example</title>
+  </head>
+  <body>
+    <form id="form" action="javascript:void(0)">
+      <label for="myfile">Select a file:</label>
+      <input type="file" id="myfile" name="myfile" multiple />
+      <button type="submit">upload</button>
+    </form>
+    <ul id="events"></ul>
+    <!-- <video src="sample_3840x2160.mp4" controls></video> -->
+    <!-- <script src="https://cdn.socket.io/3.1.1/socket.io.min.js"></script> -->
+    <!-- <script src="http://13.127.164.220:3000/socket.io.js"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="http://13.127.164.220:3000/socket.io-file-client.js"></script> -->
+    <!-- <script src="app.js"></script> -->
+    <script>
+      const $events = document.getElementById("events");
+
+      const newItem = (content) => {
+        const item = document.createElement("li");
+        item.innerText = content;
+        return item;
+      };
+
+      const socket = io.connect("http://13.127.164.220:3000"); // or ws://13.127.164.220:3000
+
+      socket.on("connect", () => {
+        $events.appendChild(newItem("connect"));
+      });
+
+      socket.on("TEST", (data) => {
+        $events.appendChild(newItem(JSON.stringify(data)));
+      });
+
+      socket.emit("CHAT_ROOM", { sender_id: 1, room_id: 12, msg: "jj" });
+
+      socket.on("WELCOME_TO_ROOM", function (data) {
+        document.body.innerHTML = "";
+        document.write(data);
+      });
+
+      socket.on("CHAT_RECIEVE", (data) => {
+        console.log(data);
+      });
+      socket.emit("CHAT_SEND", { sender_id: 1, reciever_id: 2, msg: "Heyy" });
+      socket.on("CHAT_PENDING", (data) => {
+        console.log(data);
+      });
+
+      socket.emit("POST_REACH", {
+        post_id: "1,2",
+      });
+
+      socket.emit("POST_ADD_LIVE_VIEWER", {
+        post_id: "6,7,4",
+      });
+
+      socket.on("POST_GET_LIVE_VIEWER", (data) => {
+        $events.appendChild(newItem(JSON.stringify(data)));
+      });
+
+      socket.on("TOTAL_AFILIO_USER", (data) => {
+        $events.appendChild(newItem(JSON.stringify(data)));
+      });
+      socket.emit("LINK_CLICK", {
+        item_id: "3",
+      });
+
+      socket.on("SERVER_ERROR", (data) => {
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>

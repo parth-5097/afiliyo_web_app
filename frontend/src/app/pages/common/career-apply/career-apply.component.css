@@ -1,0 +1,223 @@
+#custom-button {
+  padding: 6px 20px;
+  color: white;
+  background-color: #212529;
+  border: 1px solid #212529;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: red;
+  outline: 0;
+  box-shadow: none !important;
+}
+.contact-bg-img {
+  position: relative;
+  top: 0;
+  background-color: #000;
+  color: #fff;
+}
+.contact-bg-img:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+  background-image: url("/assets/images/how-it-work-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+.contact-img {
+  position: relative;
+  height: auto;
+  width: 100%;
+  color: #fff;
+  padding: 15px 0;
+}
+.contact-title h3 {
+  font-size: 35px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.contact-form {
+  /*background-color: #eee;*/
+  padding: 30px 40px;
+  color: #000;
+  /*margin-top: -80px;*/
+  border-radius: 5px;
+}
+.form-input-box {
+  background: #ffffff;
+  /* border: 0.5px solid rgba(0, 38, 46, 0.2); */
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 50px;
+}
+.form-input-box:focus {
+  border-color: red;
+}
+.contact-form .form-group label {
+  font-weight: bold;
+  font-size: 16px;
+}
+.form-control::placeholder {
+  color: #aeaeae;
+}
+.btn-submit {
+  background-color: #262e3a;
+  color: #fff;
+  padding: 15px 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 35%;
+  display: inline-block;
+  margin-top: 20px;
+}
+.btn-submit:hover {
+  color: #fff;
+}
+.contact-question h4 {
+  font-weight: bold;
+  font-size: 28px;
+  color: #262e3a;
+}
+.contact-question h4:before {
+  content: "";
+  border-bottom: 5px solid #000;
+  width: 66px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.contact-question h3 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #262e3a;
+  line-height: 90px;
+}
+.contact-question p {
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 177.9%;
+  color: #606875;
+}
+.con-icon {
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.address-content {
+  vertical-align: middle;
+  width: 80%;
+}
+.address-content h4 {
+  color: #262e3a;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 22px;
+}
+.address-content p {
+  font-size: 20px;
+  letter-spacing: 0.025em;
+  color: #004fff;
+  margin-bottom: 0;
+}
+
+.bg-img-black {
+  position: relative;
+  padding: 50px 0 0 0;
+}
+.bg-img-black img {
+  width: 100%;
+}
+.bg-img-content {
+  background-color: #212529;
+  padding-bottom: 150px;
+  margin-top: -170px;
+}
+.border-right-footer {
+  border-right: 1px solid #c5c0c0;
+}
+.footer-menu-inr {
+  padding: 0 30px;
+}
+.footer-menu-inr ul li {
+  padding-top: 20px;
+}
+.footer-menu-inr ul li h2 {
+  font-weight: bold;
+  font-size: 22px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.footer-menu-inr ul li p {
+  font-size: 20px;
+  color: #c5c0c0;
+}
+.btn-footer {
+  background: #fff;
+  border: 1px solid #fff;
+  color: #212529;
+  text-transform: uppercase;
+  font-weight: 600;
+  vertical-align: -webkit-baseline-middle;
+  font-size: 16px;
+  padding: 8px 30px;
+  margin-bottom: 10px;
+}
+.btn-footer:hover {
+  background: transparent;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .bg-img-black img {
+    display: none;
+  }
+  .bg-img-content {
+    padding: 50px 0;
+    margin-top: 0;
+  }
+  .border-right-footer {
+    border-right: none;
+  }
+  .footer-menu-inr {
+    border-bottom: 1px solid #c5c0c0;
+    padding: 30px;
+  }
+  .contact-question,
+  .contact-information-sectopn {
+    text-align: center;
+  }
+  
+  .btn-submit {
+    width: 100%;
+  }
+  #custom-button {
+    margin-left: auto;
+  }
+  .contact-form {
+    padding: 30px 20px;
+  }
+  .btn-cancel {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 902px) and (max-width: 1340px) {
+  .bg-img-content {
+    margin-top: -100px;
+  }
+}
+@media (min-width: 1341) and (max-width: 1440px) {
+  .bg-img-content {
+    margin-top: -120px;
+  }
+}

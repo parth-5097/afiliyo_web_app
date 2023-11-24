@@ -1,0 +1,233 @@
+<main class="content-wrapper-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="inr-title-comn">
+          <h1>Edit post</h1>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="dash-box-white">
+          <form>
+            <div class="customer-inr-sec">
+              <h4 class="d-flex align-items-center">
+                <img src="assets/images/list-type2.svg" alt="" />
+                User Overview
+              </h4>
+              <img
+                src="{{ baseUrl + data?.profile_pic_img }}"
+                alt=""
+                height="10%"
+                width="10%"
+              />
+              <div class="row mt-4">
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.name"
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    [value]="data?.username"
+                    class="form-control input-style-admin"
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="customer-inr-sec">
+              <h4 class="d-flex align-items-center">
+                <img src="assets/images/list-type2.svg" alt="" />
+                Post Overview
+              </h4>
+              <div class="row mt-4">
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    name="id"
+                    [value]="data?.id"
+                    class="form-control input-style-admin"
+                    disabled
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="number"
+                    name="likes"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.likes"
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <div class="input-group">
+                    <input
+                      type="number"
+                      name="commentPost"
+                      class="form-control input-style-admin"
+                      [(ngModel)]="data.commentPost"
+                    />
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="number"
+                    name="share"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.share"
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="number"
+                    name="savePost"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.savePost"
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="number"
+                    name="reach"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.reach"
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="number"
+                    name="impression"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.impression"
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <select
+                    name="region"
+                    class="custom-select form-control input-style-admin"
+                    [(ngModel)]="data.region"
+                  >
+                    <option selected>{{ data.region }}</option>
+                    <option
+                      *ngFor="let c of country; index as i"
+                      value="{{ c.isoCode }}"
+                    >
+                      {{ c.name }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <ngx-slick-carousel
+                  class="carousel"
+                  #slickModal="slick-carousel"
+                  [config]="slideConfig"
+                >
+                  <div
+                    ngxSlickItem
+                    *ngFor="let slide of images"
+                    class="slide"
+                    style="width: 150px; height: auto"
+                  >
+                    <video
+                      poster="{{ baseUrl + slide }}"
+                      width="100%"
+                      height="auto"
+                      autoplay
+                    >
+                      <source src="{{ baseUrl + slide }}" />
+                    </video>
+                  </div>
+                </ngx-slick-carousel>
+              </div>
+            </div>
+            <div class="customer-inr-sec">
+              <h4 class="d-flex align-items-center">
+                <img src="assets/images/list-type2.svg" alt="" />
+                Item Overview
+              </h4>
+              <div *ngFor="let item of items; index as i" class="row mt-4">
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    [value]="item.id"
+                    class="form-control input-style-admin"
+                    disabled
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    [value]="item.name"
+                    class="form-control input-style-admin"
+                    disabled
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <input
+                    type="text"
+                    [value]="item.brandName"
+                    class="form-control input-style-admin"
+                    disabled
+                  />
+                </div>
+                <div class="col-xl-3 col-md-6 form-group">
+                  <a href="{{ baseUrl }}/{{ item.link }}" target="_blank">{{
+                    item.link
+                  }}</a>
+                </div>
+              </div>
+            </div>
+            <div class="customer-inr-sec">
+              <h4 class="d-flex align-items-center">
+                <img src="assets/images/list-type2.svg" alt="" />
+                Hash Tags
+              </h4>
+              <div class="row mt-4">
+                <div class="col-12 form-group">
+                  <input
+                    type="text"
+                    name="hashtag"
+                    class="form-control input-style-admin"
+                    [(ngModel)]="data.hashtag"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="customer-inr-sec">
+              <h4 class="d-flex align-items-center">
+                <img src="assets/images/list-type2.svg" alt="" />
+                Description
+              </h4>
+              <div class="row mt-4">
+                <div class="col-12 form-group">
+                  <textarea
+                    class="form-control input-style-admin h-auto"
+                    rows="5"
+                    name="description"
+                    [(ngModel)]="data.description"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="btn-btm-inr-tabs text-center mt-sm-5 mt-3">
+              <button
+                type="submit"
+                class="btn btn-reset mr-sm-4 mr-2"
+                (click)="onSubmit()"
+                [disabled]="submit"
+              >
+                Submit
+              </button>
+              <button type="button" class="btn btn-inr-top">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay toggle-icon-main"></div>
+</main>

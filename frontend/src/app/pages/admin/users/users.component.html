@@ -1,0 +1,230 @@
+<main class="content-wrapper-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="inr-title-comn d-sm-flex align-items-center">
+          <h1>Users</h1>
+          <div class="inr-title-btn ml-auto mt-3 mt-md-0 text-center">
+            <button
+              type="button"
+              class="btn btn btn-reset mr-2"
+              (click)="onExport()"
+            >
+              Export
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="dash-box-white">
+          <div class="tab-content">
+            <div
+              class="tab-pane fade active show"
+              id="pills-All"
+              role="tabpanel"
+              aria-labelledby="pills-All-tab"
+            >
+              <table
+                datatable
+                [dtOptions]="dtOptions"
+                [dtTrigger]="dtTrigger"
+                id="Customers-list"
+                class="display"
+              >
+                <thead>
+                  <tr>
+                    <th>Action</th>
+                    <th>Login Status</th>
+                    <th>Role</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Phone Number</th>
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
+                    <th>Reward</th>
+                    <th>Subscription</th>
+                    <th>Otp Status</th>
+                  </tr>
+                </thead>
+                <tbody *ngIf="data?.length != 0">
+                  <tr *ngFor="let person of data; index as i">
+                    <td>
+                      <a
+                        href="javascript:void(0)"
+                        (click)="person.isEditable = !person.isEditable"
+                        *ngIf="!person.isEditable"
+                      >
+                        <img
+                          src="/assets/images/edit-icon-table.svg"
+                          class="mx-2 table-img-inr"
+                          alt=""
+                        />
+                      </a>
+                      <a
+                        href="javascript:void(0)"
+                        (click)="
+                          [
+                            (person.isEditable = !person.isEditable),
+                            onEditRaw(person.id)
+                          ]
+                        "
+                        *ngIf="person.isEditable"
+                        style="margin-right: 10px"
+                      >
+                        <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+                      </a>
+                      <a
+                        href="javascript:void(0)"
+                        (click)="
+                          [(person.isEditable = !person.isEditable), rerender()]
+                        "
+                        *ngIf="person.isEditable"
+                        style="margin-right: 6px"
+                      >
+                        <i class="fa fa-close fa-lg"></i>
+                      </a>
+                      <a
+                        *ngIf="!person.isEditable"
+                        href="javascript:void(0)"
+                        (click)="onDeleteRaw(person.id)"
+                      >
+                        <img
+                          src="/assets/images/delete-icon.svg"
+                          class="mx-2 table-img-inr"
+                          alt=""
+                        />
+                      </a>
+                    </td>
+                    <td>
+                      <div class="custom-control custom-switch">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="login{{ i }}"
+                          [checked]="person.loginStatus"
+                          disabled
+                        />
+                        <label class="custom-control-label" for="login{{ i }}"
+                          >Active</label
+                        >
+                      </div>
+                    </td>
+                    <td>{{ person.role }}</td>
+                    <td *ngIf="person.isEditable">
+                      <input
+                        class="input-style"
+                        type="text"
+                        [(ngModel)]="data[i].name"
+                        [placeholder]="person.name"
+                        (keyup.enter)="
+                          [
+                            (person.isEditable = !person.isEditable),
+                            onEditRaw(person.id)
+                          ]
+                        "
+                      />
+                    </td>
+                    <td *ngIf="!person.isEditable">{{ person.name }}</td>
+                    <td *ngIf="person.isEditable">
+                      <input
+                        class="input-style"
+                        type="text"
+                        [(ngModel)]="data[i].email"
+                        [placeholder]="person.email"
+                        (keyup.enter)="
+                          [
+                            (person.isEditable = !person.isEditable),
+                            onEditRaw(person.id)
+                          ]
+                        "
+                      />
+                    </td>
+                    <td *ngIf="!person.isEditable">{{ person.email }}</td>
+                    <td *ngIf="person.isEditable">
+                      <input
+                        class="input-style"
+                        type="text"
+                        [(ngModel)]="data[i].username"
+                        [placeholder]="person.username"
+                        (keyup.enter)="
+                          [
+                            (person.isEditable = !person.isEditable),
+                            onEditRaw(person.id)
+                          ]
+                        "
+                      />
+                    </td>
+                    <td *ngIf="!person.isEditable">{{ person.username }}</td>
+                    <td *ngIf="person.isEditable">
+                      <input
+                        class="input-style"
+                        type="text"
+                        [(ngModel)]="data[i].phoneNumber"
+                        [placeholder]="person.phoneNumber"
+                        (keyup.enter)="
+                          [
+                            (person.isEditable = !person.isEditable),
+                            onEditRaw(person.id)
+                          ]
+                        "
+                      />
+                    </td>
+                    <td *ngIf="!person.isEditable">{{ person.phoneNumber }}</td>
+                    <td *ngIf="person.isEditable">
+                      <input
+                        class="input-style"
+                        type="text"
+                        [(ngModel)]="data[i].gender"
+                        [placeholder]="person.gender"
+                        (keyup.enter)="
+                          [
+                            (person.isEditable = !person.isEditable),
+                            onEditRaw(person.id)
+                          ]
+                        "
+                      />
+                    </td>
+                    <td *ngIf="!person.isEditable">{{ person.gender }}</td>
+                    <td *ngIf="person.isEditable">
+                      <input
+                        class="input-style"
+                        type="date"
+                        [(ngModel)]="data[i].dob"
+                        [placeholder]="person.dob"
+                        (keyup.enter)="
+                          [
+                            (person.isEditable = !person.isEditable),
+                            onEditRaw(person.id)
+                          ]
+                        "
+                      />
+                    </td>
+                    <td *ngIf="!person.isEditable">{{ person.dob }}</td>
+                    <td>{{ person.reward }}</td>
+                    <td>{{ person.subscription }}</td>
+                    <td>
+                      <div class="custom-control custom-switch">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="otp{{ i }}"
+                          [checked]="person.otp_status"
+                          disabled="disabled"
+                        />
+                        <label class="custom-control-label" for="otp{{ i }}"
+                          >Active</label
+                        >
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay toggle-icon-main"></div>
+</main>

@@ -1,0 +1,29 @@
+<footer class="bg-color-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-menu">
+          <ul class="list-unstyled text-center">
+            <li>
+              <a href="#career" (click)="onRedirect('career')"
+                >careers</a
+              >
+            </li>
+            <li>
+              <a href="#about" (click)="onRedirect('about')"
+                >about us</a
+              >
+            </li>
+            <li><a [routerLink]="['/privacy']">privacy policy</a></li>
+            <li><a [routerLink]="['/cookie-policy']">cookie policy</a></li>
+            <li><a [routerLink]="['/how-it-works']">How it works</a></li>
+            <li>
+              <a [routerLink]="['/terms-condition']">Terms and Conditions</a>
+            </li>
+            <!-- <li><a>do not sell</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

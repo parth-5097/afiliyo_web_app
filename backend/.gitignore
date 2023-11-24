@@ -1,0 +1,14 @@
+node_modules
+.serverless
+test.json
+test.js
+development.js
+access.log
+testing_lambda/
+server_cred/*
+AWS-config
+.env
+./src/config.js
+./postman_collection
+./src/controllers/Images/reCaptchaSolver.js
+./src/controllers/notification/key.json

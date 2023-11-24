@@ -1,0 +1,458 @@
+<section>
+  <div class="bg-content">
+    <div class="bg-content-img">
+      <div class="bg2-content-img"></div>
+      <div class="container center-section">
+        <div class="row center-section">
+          <div class="col-12 col-lg-10 offset-lg-1">
+            <div class="influencer-bg-color">
+              <div class="wizard">
+                <div class="influ-title">
+                  <p class="mb-0">Tell us about you</p>
+                </div>
+                <div class="wizard-inner">
+                  <div class="connecting-line"></div>
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                      <a
+                        href="#step1"
+                        data-toggle="tab"
+                        aria-controls="step1"
+                        role="tab"
+                        aria-expanded="true"
+                        style="pointer-events: none"
+                      >
+                        <span class="round-tab">1 </span>
+                        <i style="margin-right: 8px">Your Info</i></a
+                      >
+                    </li>
+                    <li role="presentation" class="disabled">
+                      <a
+                        href="#step2"
+                        data-toggle="tab"
+                        aria-controls="step2"
+                        role="tab"
+                        aria-expanded="false"
+                        style="pointer-events: none"
+                      >
+                        <span class="round-tab">2</span>
+                        <i style="margin-right: 25px">Posting Channels</i></a
+                      >
+                    </li>
+                    <li role="presentation" class="disabled">
+                      <a
+                        href="#step3"
+                        data-toggle="tab"
+                        aria-controls="step3"
+                        role="tab"
+                        style="pointer-events: none"
+                        ><span class="round-tab">3</span>
+                        <i style="margin-right: 8px">Your Goals</i></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <form
+                  class="login-box"
+                  [formGroup]="influencerForm"
+                  (ngSubmit)="onSubmit()"
+                >
+                  <div class="tab-content" id="main_form">
+                    <div class="tab-pane active" role="tabpanel" id="step1">
+                      <form [formGroup]="inf1Form" (ngSubmit)="onNext1()">
+                        <div class="row mt-4">
+                          <div class="col-12 col-lg-6">
+                            <div class="form-group step1-form md-form mt-3">
+                              <input
+                                type="text"
+                                id="fname"
+                                class="form-control fname"
+                                formControlName="firstName"
+                                placeholder="First Name*"
+                                [ngClass]="{
+                                  'is-invalid':
+                                    inf1Submitted && f.firstName.errors
+                                }"
+                              />
+                              <div
+                                *ngIf="inf1Submitted && f.firstName.errors"
+                                class="invalid-feedback"
+                              >
+                                <div *ngIf="f.firstName.errors.required">
+                                  First name is required
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-lg-6">
+                            <div class="form-group step1-form md-form mt-3">
+                              <input
+                                type="text"
+                                id="lname"
+                                class="form-control lname"
+                                formControlName="lastName"
+                                placeholder="Last Name*"
+                                [ngClass]="{
+                                  'is-invalid':
+                                    inf1Submitted && f.lastName.errors
+                                }"
+                              />
+                              <div
+                                *ngIf="inf1Submitted && f.lastName.errors"
+                                class="invalid-feedback"
+                              >
+                                <div *ngIf="f.lastName.errors.required">
+                                  Last name is required
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="form-group step1-form md-form mt-3">
+                              <input
+                                type="email"
+                                id="email"
+                                class="form-control email"
+                                formControlName="email"
+                                placeholder="Email Address*"
+                                [ngClass]="{
+                                  'is-invalid': inf1Submitted && f.email.errors
+                                }"
+                              />
+                              <div
+                                *ngIf="inf1Submitted && f.email.errors"
+                                class="invalid-feedback"
+                              >
+                                <div *ngIf="f.email.errors.required">
+                                  Email is required
+                                </div>
+                                <div
+                                  *ngIf="
+                                    f.email.errors.email ||
+                                    f.email.errors.pattern
+                                  "
+                                >
+                                  Email must be a valid email address
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="form-group step1-form mt-3">
+                              <select
+                                class="form-control cselect"
+                                id="cselect"
+                                formControlName="primaryAudiance"
+                                [ngClass]="{
+                                  'is-invalid':
+                                    inf1Submitted && f.primaryAudiance.errors
+                                }"
+                              >
+                                <option selected>
+                                  Primary Audience Region
+                                </option>
+                                <option *ngFor="let state of state">
+                                  {{ state.name }}
+                                </option>
+                              </select>
+                              <div
+                                *ngIf="
+                                  inf1Submitted && f.primaryAudiance.errors
+                                "
+                                class="invalid-feedback"
+                              >
+                                <div *ngIf="f.primaryAudiance.errors.required">
+                                  This field is required
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="list-inline text-center">
+                          <li>
+                            <button
+                              type="submit"
+                              class="submit-btn default-btn next-step1"
+                            >
+                              Next
+                            </button>
+                          </li>
+                        </ul>
+                      </form>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step2">
+                      <p>
+                        Please provide all channels you post content to
+                        regularly.
+                      </p>
+                      <form [formGroup]="inf2Form" (ngSubmit)="onNext2()">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <div class="form-group step1-form mt-3">
+                               
+                              <select
+                                class="form-control"
+                                formControlName="primaryPostingc"
+                                [ngClass]="{
+                                  'is-invalid':
+                                    inf2 && f2.primaryPostingc.errors
+                                }"
+                              >
+                                <option disabled selected value="">
+                                  Primary Posting Channel
+                                </option>
+                                   
+                                <option>2</option>
+                                   
+                                <option>3</option>
+                                   
+                                <option>4</option>
+                                 
+                              </select>
+                              <div
+                                *ngIf="inf2 && f2.primaryPostingc.errors"
+                                class="invalid-feedback"
+                              >
+                                <div *ngIf="f2.primaryPostingc.errors.required">
+                                  This field is required
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="col-12 col-lg-6"
+                            style="margin-top: 1.2rem !important"
+                          >
+                            <div class="form-group step1-form mt-3">
+                              <input
+                                placeholder="Username Or URL"
+                                class="form-control textbox-form"
+                                formControlName="url1"
+                                type="text"
+                                id="textboxes"
+                                [ngClass]="{
+                                  'is-invalid': inf2 && f2.url1.errors
+                                }"
+                              />
+                              <div
+                                *ngIf="inf2 && f2.url1.errors"
+                                class="invalid-feedback"
+                              >
+                                <div *ngIf="f2.url1.errors.required">
+                                  This field is required
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="form-group step1-form mt-3">
+                              <select
+                                id="selectBox"
+                                (change)="changeFunction()"
+                                class="form-control"
+                              >
+                                <option value="MBA">
+                                  Secondary Posting Channel
+                                </option>
+                                <option value="MBA">MBA</option>
+                                <option value="MBA">Not Listed</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="form-group step1-form mt-3">
+                              <input
+                                name="dd_number"
+                                placeholder="Username Or URL"
+                                class="form-control textbox-form"
+                                type="text"
+                                style="display: none"
+                                id="textboxes"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div
+                              class="add-posting mt-3"
+                              (click)="postingFuncion()"
+                            >
+                              <p>
+                                <i class="fa fa-plus mr-2"></i>Add Another
+                                Posting Channel
+                              </p>
+                            </div>
+                            <div
+                              class="
+                                form-group
+                                show-posting-select
+                                step1-form
+                                mt-3
+                              "
+                            >
+                              <select
+                                id="postselectBox"
+                                (change)="postchangeFunction()"
+                                class="form-control"
+                              >
+                                <option value="MBA">
+                                  Additional Posting Channel
+                                </option>
+                                <option value="MBA">MBA</option>
+                                <option value="MBA">Not Listed</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="form-group step1-form mt-3">
+                              <input
+                                name="dd_number"
+                                placeholder="Username Or URL"
+                                class="form-control posttextbox-form"
+                                type="text"
+                                style="display: none"
+                                id="textboxes"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="list-inline text-center">
+                          <li class="d-inline-block">
+                            <button type="button" class="default-btn prev-step">
+                              Previous
+                            </button>
+                          </li>
+                          <li class="d-inline-block">
+                            <button
+                              type="submit"
+                              class="default-btn next-step2 next-step"
+                            >
+                              Next
+                            </button>
+                          </li>
+                        </ul>
+                      </form>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step3">
+                      <p>
+                        These questions are optional but can help increase your
+                        chances of being approved.
+                      </p>
+                      <p>
+                        Please identify ONE of the categories you need help
+                        with:
+                      </p>
+                      <div
+                        *ngFor="let val of radioData1; index as i"
+                        class="form-check"
+                      >
+                        <input
+                          class="form-check-input arrow-pointer"
+                          type="radio"
+                          formControlName="categoriesHelp"
+                          [id]="radioData1[i]"
+                          [value]="radioData1[i]"
+                          (change)="onSelectRequest($event, 'radioData1')"
+                          [ngClass]="{
+                            'is-invalid': submitted && f1.categoriesHelp.errors
+                          }"
+                        />
+                        <label class="form-check-label" [for]="radioData1[i]">{{
+                          radioData1[i]
+                        }}</label>
+                      </div>
+                      <p class="mt-3">
+                        How much time do you plan to dedicate to creating and
+                        monetizing content?
+                      </p>
+                      <div
+                        *ngFor="let val of radioData2; index as i"
+                        class="form-check"
+                      >
+                        <input
+                          class="form-check-input arrow-pointer"
+                          type="radio"
+                          formControlName="timeToCreate"
+                          [id]="radioData2[i]"
+                          [value]="radioData2[i]"
+                          (change)="onSelectRequest($event, 'radioData2')"
+                          [ngClass]="{
+                            'is-invalid': submitted && f1.timeToCreate.errors
+                          }"
+                        />
+                        <label class="form-check-label" [for]="radioData2[i]">{{
+                          radioData2[i]
+                        }}</label>
+                      </div>
+                      <div
+                        class="custom-control custom-checkbox text-center mt-3"
+                      >
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          formControlName="acceptTerms"
+                          id="acceptTerms"
+                          [ngClass]="{
+                            'is-invalid': submitted && f1.acceptTerms.errors
+                          }"
+                        />
+                        <label
+                          class="form-check-label custom-control-label"
+                          for="acceptTerms"
+                          >I agree to the terms of the
+                          <a
+                            [routerLink]="['/privacy']"
+                            target="_blank"
+                            class="privacy-policy-toggle"
+                            >Privacy Policy</a
+                          >
+                          and
+                          <a [routerLink]="['/cookie-policy']" target="_blank"
+                            >Cookie Policy.</a
+                          ></label
+                        >
+
+                        <div
+                          *ngIf="submitted && f1.acceptTerms.errors"
+                          class="invalid-feedback"
+                        >
+                          Accept Ts & Cs is required
+                        </div>
+                      </div>
+                      <ul class="list-inline text-center">
+                        <li class="d-inline-block">
+                          <button type="button" class="default-btn prev-step">
+                            Previous
+                          </button>
+                        </li>
+                        <li class="d-inline-block">
+                          <button
+                            type="submit"
+                            class="default-btn next-step"
+                            [disabled]="submit"
+                          >
+                            Done
+                          </button>
+                        </li>
+                        <li class="d-inline-block">
+                          <button
+                            type="button"
+                            class="default-btn next-step"
+                            (click)="onCancel()"
+                          >
+                            Cancel
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
